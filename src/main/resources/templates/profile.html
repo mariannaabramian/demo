@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<body>
+
+<p>User: <span th:text="${account.getLogin()}"></span></p>
+
+<table>
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Title</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <!--for (Task task : tasks) -->
+    <tr th:each="task : ${tasks}">
+        <td th:text="${task.getId()}"></td>
+        <td th:text="${task.getTitle()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
